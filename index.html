@@ -1,1 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 14</title>
+</head>
+<body bgcolor="#0D1117" text="#C0C0C0">
 
+    <style type="text/css">
+        span.inlineBlock {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .parent {
+            width: 100%;
+            background-color: #0D1117;
+        }
+
+        .child1 {
+            width: 59%;
+            background-color: #2D3A4F;
+           
+        }
+
+        .child2 {
+            right: 0;
+            width: 30%;
+            background: linear-gradient(to bottom left, #35445C 50%, #19202B 50%);
+            margin-left: 5px;
+            position: absolute;
+        }
+
+        .blk {
+            padding: 20px;
+            height: 940px;
+            margin: 10px;
+        }
+        .layer1 {
+            width: 100%; /* Ширина */
+            height: 50px;
+            padding: 5px; /* Поля */
+            margin: 5px;
+            margin-top: 95%;
+            background: #19202B; /* Колір фона */
+        }
+        .layer2 {
+            width: 40%; /* Ширина */
+            height: 50px;
+            padding: 10px; /* Поля */
+            margin-left: 30px;
+            margin-top: 15px;
+            background: #19202B; /* Колір фона */
+        }
+        .layer3 {
+            width: 100%; /* Ширина */
+            height: 100px;
+            padding: 4px; /* Поля */
+            background: #35445C; /* Колір фона */
+        }
+        .layer4 {
+            width: 60%; /* Ширина */
+            height: 100%;
+            padding: 5px; /* Поля */
+            background: #35445C; /* Колір фона */
+        }
+        .layer5 {
+            width: 100%; /* Ширина */
+            padding: 4px; /* Поля */
+            background: #19202B; /* Колір фона */
+        }
+        .layer6 {
+            width: 20%; /* Ширина */
+            height: 100%;
+            right: 0;
+            padding: 5px; /* Поля */
+            background: #35445C; /* Колір фона */
+        }
+        .header1 {
+            height: 100px;
+            background: radial-gradient(#35445C, #0D1117);
+        }
+        .content1 {
+            background: linear-gradient(to left, #2D3A4F 0%, #0D1117 100%);
+        }
+        /* The side navigation menu */
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #19202B;
+            position: absolute;
+            height: 1337px;
+            overflow: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: #C0C0C0;
+            padding: 16px;
+            text-decoration: none;
+        }
+                
+        .sidebar a.active {
+            background-color: #35445C;
+            color: white;
+        }
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+        div.content {
+            margin-left: 25%;
+            padding: 1px 16px;
+            height: 1320px;
+        }
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                float: left;
+            }
+            div.content {
+                margin-left: 0;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+        .rr {
+            font-family: Pompadur, 'Comic Sans MS', cursive;
+        }
+        #c {
+            color: #ffffff;
+        }
+        #b {
+            color: #35445C;
+        }
+        a:link, a:visited {
+            background-color: #35445C;
+            border: none;
+            color: #0D1117;
+            padding: 5px 5px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+    <div class="layer3">
+        <div class="layer2">
+            <h1>by Olexandr Kyrylchuk</h1>
+        </div>
+    </div>
+    <br />
+    <div class="rr">
+        <!-- The sidebar -->
+        <div class="sidebar">
+            <h2 align="center">Український народ – непереможний, бо вміє добре сміятися навіть у такі часи!</h2>
+            <h3>
+                <p>***</p>
+
+                Оголошення на паркані. Куплю 2-3 полонених москалів для роботи на городі у весінньо-осінній період .
+
+                <p>***</p>
+
+                Народна мудрість. Якщо Росія ведмідь, то Україна - вулик з бджолами!
+
+                <p>***</p>
+
+                Яким вже треба буде ідіотом, щоб тебе одночасно засудили і Папа Римський, і таліби
+
+                <p>***</p>
+
+                Російські війська спантеличені - їм обіцяли квіти, але не уточнили, що на могилу.
+
+                <p>***</p>
+
+                Мрія весни-2022: вигулювати собаку під дощем, а не під «Градом»
+
+            </h3>
+
+        </div>
+        <!-- Page content -->
+        <div class="content">
+            <div class="layer5">
+                <centeer><h2>Модульна контрольна </h2></centeer>
+                <h3>
+                    <p id="b">Завдання 1.</p>
+                    Засобами HTML та CSS створіть веб-сторінку заданого вигляду,
+                    використовуючи розмітку за допомогою плаваючих блоків.
+                </h3>
+                <h3>
+                    <p id="b">Завдання 2.</p>
+                    Створіть у блоці No 3 «ЗРАЗОК» форми реєстрації користувача (дана
+                    форма в базу даних не заносить інформацію, лише форма ). Для того, щоб
+                    поля форми відображались згідно даного прикладу використовуйте таблиці.
+                </h3>
+            </div>
+            <br />
+                <span class="inlineBlock parent">
+                    <span class="inlineBlock child1">
+                        <div class="blk">
+                            <form method="post" id="myform"></form>
+                            <table align="center" width="100%" border="5px" bordercolor="  #000000" bgcolor="#19202B">
+                                <tbody>
+                                    <tr>
+                                        <td>Логін:</td>
+                                        <td><input type="text" name="Name" form="myform" required placeholder="login"></td>
+                                    </tr>
+                                    <tr>
+                                        <td> Пароль:</td>
+                                        <td>
+                                            <input maxlength="12" required type="password" form="myform" id="txtNewPassword" placeholder="password" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Підтвердіть пароль:</td>
+                                        <td>
+
+                                            <input required type="password" form="myform" id="txtConfirmPassword" placeholder="retry" onkeyup="checkPasswordMatch();" />
+
+                                            <div class="registrationFormAlert" id="divCheckPasswordMatch">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ваша стать</td>
+                                        <td>
+                                            <input type="radio" name="answer" value="yes" checked /> Мужик
+                                            <input type="radio" name="answer" value="no" /> Жінка
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вкажіть місто:</td>
+                                        <td style="background-color: #0D1117 ">
+                                            <center>
+                                                <select name="sity" size=5 form="myform" required>
+                                                    <option value="Kiyev"> Київ </option>
+                                                    <option value="Lviv"> Львів </option>
+                                                    <option value="Kharkiv"> Харків </option>
+                                                    <option value="Dnipro"> Дніпро </option>
+                                                    <option value="Odesa"> Одеса </option>
+                                                    <option value="Rivne"> Рівне </option>
+                                                    <option value="Pedro"> Житомир </option>
+                                                    <option value="Poltava"> Полтава </option>
+                                                    <option value="Ternopil"> Тернопіль </option>
+                                                    <option value="Symy"> Суми </option>
+                                                    <option value="Lyck"> Луцьк </option>
+                                                    <option value="Herson"> Херсон </option>
+                                                    <option value="Zaporiga"> Запоріжжя </option>
+                                                    <option value="Ivano-Frankivsk"> Івано-Франківськ </option>
+                                                    <option value="Hmelnytskiy"> Хмельницький </option>
+                                                    <option value="Vinnytsa"> Вінниця  </option>
+                                                    <option value="Krivyi Rig"> Кривий Ріг </option>
+                                                    <option value="Ujgorod"> Ужгород </option>
+                                                    <option value="Mikolaiv"> Миколаїв </option>
+                                                    <option value="Chernivtsi"> Чернівці </option>
+                                                </select>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ваші інтереси:</td>
+                                        <td>
+                                            <input type="radio" name="ripa" value="yes" checked />Музика
+                                            <input type="radio" name="ripa" value="no" />Програмування
+                                            <input type="radio" name="ripa" value="yes" />Пиво
+                                            <input type="radio" name="ripa" value="no" />Дівчата
+                                            <input type="radio" name="ripa" value="no" />Все разом)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th align="right" colspan="2">
+                                            <input type="submit" name="add" form="myform" bgcollor="red" />
+                                            <input type="reset" name="pip" form="myform" />
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            
+                            <br />
+                            <center><h2>Каламбуря</h2></center>
+                            <center>
+                                <img src="https://static.ukrinform.com/photos/2022_03/1646503595-529.jpg" 
+                                     width="500px" height="500px"/>
+                            </center>
+                        </div>
+                    </span><span class="inlineBlock child2">
+                        <div class="blk">
+                            <center>
+                                <img src="" />
+                            </center>
+                        </div>
+                    </span>
+                </span>
+        </div>
+            <br />
+            <div class="layer5">
+               <table  style="float: left">
+                    <hr color="#35445C" size="4px" />
+                    <tbody>
+                        <tr>
+                            <td bgcolor="#0D1117">Мій коледж</td>
+                            <td bgcolor="#0D1117"><a href="http://www.tehcollege.rv.ua/">→→→→→ тисни тут →→→→→</a></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#0D1117">Мій Instagram</td>
+                            <td bgcolor="#0D1117"><a href="https://www.instagram.com/kyrylchuk_of/">→→→→→ тисни тут →→→→→</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>По всім запитанням звертатися сюди: <a href="mailto:o.kykylchuk12@gmail.com" target="_blank">o.kykylchuk12@gmail.com</a></h4>
+                <hr color="#35445C" size="4px"><center><h4 align="left">Сайт сворений спеціально для модульної контрольної роботи з обчислювальних систем для викладача Дмитра Володимировича.</h4></center>
+
+            </div>
+        
+
+</html>
